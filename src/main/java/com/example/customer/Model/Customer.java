@@ -1,13 +1,13 @@
 package com.example.customer.Model;
 
-public class Customers {
+public class Customer {
     private int id;
     private String firstName;
     private String lastName;
     private String phone;
     private String email;
 
-    public Customers() {
+    public Customer() {
     }
 
     public int getId() {
