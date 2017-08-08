@@ -31,14 +31,14 @@ public class CustomerServiceTest {
         Customer customer1 = new Customer();
         customer1.setFirstName(firstName);
         customer1.setLastName(lastName);
-        customerRepository.add(customer1);
+        customerRepository.save(customer1);
 
-        List<Customer> people = customerRepository.get();
+        List<Customer> people = customerRepository.findAll();
 
         Customer customer2 = findInList(people, firstName, lastName);
         Assert.assertNotNull(customer2);
 
-        Customer customer3 = customerRepository.getById(customer2.getId());
+        Customer customer3 = customerRepository.findOne(customer2.getId());
         Assert.assertNotNull(customer3);
         Assert.assertEquals(firstName, customer3.getFirstName());
         Assert.assertEquals(lastName, customer3.getLastName());

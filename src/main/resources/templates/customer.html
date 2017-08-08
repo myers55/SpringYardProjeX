@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer</title>
+    <style>
+        body{
+            text-align:center}
+    </style>
+    <script>
+function goBack() {
+    window.history.back();
+}
+</script>
+</head>
+<body>
+<div>
+    {{customer.id}} {{customer.firstName}} {{customer.lastName}} {{customer.phone}} {{customer.email}}
+</div>
+<button onclick="goBack()">Return</button>
+</body>
+</html>

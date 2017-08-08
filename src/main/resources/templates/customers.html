@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customers</title>
+    <style>
+        body{
+            text-align:center}
+    </style>
+</head>
+<body>
+<a href="/customers/add">New Customer</a>
+{{#customers}}
+<div>
+    <a href="/customers/{{id}}">{{id}}</a>
+    {{firstName}} {{lastName}} {{phone}} {{email}}
+</div>
+{{/customers}}
+</body>
+</html>

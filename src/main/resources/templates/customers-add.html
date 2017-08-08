@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Add</title>
+    <style>
+        body {
+            background: #fff;
+            font-family:
+            sans-serif; }
+         h1{
+            text-align:center
+            }
+         form {
+            margin: 50px auto;
+            width: 300px; }
+        div {
+            display: inline-block;
+            padding: 5px 0;
+            width: 300px; }
+        label { text-align: middle;
+                text-transform: capitalize;
+                width: 150px; }
+        input[type="text"] {
+            float: right;
+            width: 150px; }
+        input[type="submit"] {
+            margin-left: 145px; }
+    </style>
+</head>
+<body>
+<h1>Please input your Information</h1>
+<form action="/customers" method="post">
+      <div>
+         <label for="first-name">First name</label></td>
+         <input id="first-name" name="firstName" type="text">
+       </div>
+       <div>
+         <label for="last-name">Last name</label>
+         <input id="last-name" name="lastName" type="text">
+       </div>
+       <div>
+         <label for="phone-number">Phone Number</label>
+         <input id="phone-number" name="phone" type="text">
+       </div>
+       <div>
+         <label for="email">Email</label>
+         <input id="email" name="email" type="text">
+       </div>
+         <input type="submit" value="submit">
+    </form>
+</form>
+</body>
+</html>
