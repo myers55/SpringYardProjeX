@@ -3,12 +3,10 @@ package com.example.customer.Controllers;
 import com.example.customer.Model.Customer;
 import com.example.customer.Repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -30,6 +28,7 @@ public class CustomersController {
 
         return "customers-add";
     }
+    @Secured({"ROLE_REGULAR_USER", "ROLE_ADMIN"})
     @RequestMapping(path = "/customers", method = RequestMethod.POST)
     public String customersAdd(@ModelAttribute Customer customer){
         customerRepository.save(customer);
@@ -42,6 +41,11 @@ public class CustomersController {
         model.addAttribute("customer", customer);
 
         return "customer";
+    }
+
+    @GetMapping("/login")
+    String login() {
+        return "login";
     }
 
 //    @RequestMapping(path = "/customers", method = RequestMethod.GET)
