@@ -50,6 +50,13 @@ public class CustomersController {
         return "login";
     }
 
+    @RequestMapping("/loggedout")
+    String logout(Model model) {
+        List<Customer> customers = customerRepository.findAll();
+        model.addAttribute("customers", customers);
+        return "index";
+    }
+
 //    @RequestMapping(path = "/customers", method = RequestMethod.GET)
 //    public String customers(Model model){
 //        List<Customer> customerList;

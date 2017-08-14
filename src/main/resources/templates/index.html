@@ -19,5 +19,10 @@
 <body>
 <h1>Welcome</h1>
 <a href="/customers">Customers</a>
+<div authorize="isAuthenticated()">
+    <form action="/logout" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
+</div>
 </body>
 </html>
