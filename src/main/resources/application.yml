@@ -1,4 +1,69 @@
-server.port 3000
-spring.datasource.url=jdbc:postgresql://localhost:5432/customerdb
-spring.datasource.username=customeruser
-spring.datasource.password=customerpass
+server:
+  port: 3000
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/customerdb
+    username: sunshine
+github:
+  client:
+    clientId: 5a7edf8790d1d7155337
+    clientSecret: db67f4434a362d1e08ba9ffa4cee016058c5978a
+    accessTokenUri: https://github.com/login/oauth/access_token
+    userAuthorizationUri: https://github.com/login/oauth/authorize
+    clientAuthenticationScheme: form
+  resource:
+    userInfoUri: https://api.github.com/user
+#facebook:
+#  client:
+#    clientId: 307351016374808
+#    clientSecret: 03731a9f55fccfb676bcd51b1003b74b
+#    accessTokenUri: https://graph.facebook.com/oauth/access_token
+#    userAuthorizationUri: https://www.facebook.com/dialog/oauth
+#    tokenName: oauth_token
+#    authenticationScheme: query
+#    clientAuthenticationScheme: form
+#  resource:
+#    userInfoUri: https://graph.facebook.com/me
+
+#google:
+#  client:
+#    clientId: 1047220931894-3meo845jqf33frv7nsjeridrste3tp6h.apps.googleusercontent.com
+#    clientSecret:  NeHhb5lL9EfMaIuFupnl1DJw
+#    accessTokenUri: https://www.googleapis.com/oauth2/v4/token
+#    userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
+#    clientAuthenticationScheme: form
+#    scope: email
+#  resource:
+#    userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
+
+#github.client.clientId=5a7edf8790d1d7155337
+#github.client.clientSecret=db67f4434a362d1e08ba9ffa4cee016058c5978a
+#github.client.accessTokenUri=https://github.com/login/oauth/access_token
+#github.client.userAuthorizationUri=https://github.com/login/oauth/authorize
+#github.client.clientAuthenticationScheme=form
+#github.resource.userInfoUri=https://api.github.com/user
+
+
+#  facebook:
+#    client:
+#        clientId: 307351016374808
+#        clientSecret: 03731a9f55fccfb676bcd51b1003b74b
+#        accessTokenUri: https://graph.facebook.com/oauth/access_token
+#        userAuthorizationUri: https://www.facebook.com/dialog/oauth
+#        tokenName: oauth_token
+#        authenticationScheme: query
+#        clientAuthenticationScheme: form
+#      resource:
+#        userInfoUri: https://graph.facebook.com/me
+
+
+#  google:
+#    client:
+#        clientId: 1047220931894-3meo845jqf33frv7nsjeridrste3tp6h.apps.googleusercontent.com
+#        clientSecret:  NeHhb5lL9EfMaIuFupnl1DJw
+#        accessTokenUri: https://www.googleapis.com/oauth2/v4/token
+#        userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
+#        clientAuthenticationScheme: form
+#        scope: email
+#      resource:
+#       userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
